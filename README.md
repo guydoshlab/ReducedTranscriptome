@@ -1,7 +1,7 @@
 # ReducedTranscriptome
 Python3 code to analyze ribosome profiling data aligned to a reduced transcriptome
 
-The code in this repository can be used for analyzing ribosome profiling data from any organism with an annotated transcriptome. Footprint data needs to be first mapped to a set of transcripts (1 isoform per gene), such as those provided by the MANE project. The output SAM files can then be used by mammalian_builddense.py to create data structures in Python to hold the sequence and mapped footprint information for each gene (both 5' and 3' end assignments). These are then pickled in python and saved to disk. 
+The code in this Python3 repository can be used for analyzing ribosome profiling data from any organism with an annotated transcriptome. Footprint data needs to be first mapped to a set of transcripts (1 isoform per gene), such as those provided by the MANE project. The output SAM files can then be used by mammalian_builddense.py to create data structures in Python to hold the sequence and mapped footprint information for each gene (both 5' and 3' end assignments). These are then pickled in python and saved to disk. 
 
 The code in tools_m.py can then be used with associated input text files to analyze this data for quantitation (counting reads), metagene, metacodon, or localized pause analysis. The code can also be used to determine dORFs and to write out footprint density from a spliced gene to file. Most of these tasks can be performed by using the associated "wrapper" function to read in the input file and pickled density file.
 
@@ -24,5 +24,6 @@ Code to write out reads mapping to a spliced gene in a csv file, mainly for pres
 
 dorflist.txt
 Experimental function that helps find small ORFs in UTR regions by reporting in-frame reads in the small ORF and main ORF. Relies on well-RNased ribosome footprint data and precise shift values.
+
 
 
